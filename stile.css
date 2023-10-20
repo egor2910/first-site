@@ -10,7 +10,7 @@ a {
 html,
 body {
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .header {
@@ -32,8 +32,7 @@ nav {
 nav h3 {
   color: aqua;
   font-size: 20px;
-  border-bottom: 2px solid rgb(222,
-      153, 24);
+  border-bottom: 2px solid rgb(222, 153, 24);
   transition: 0.5s;
 }
 
@@ -43,4 +42,46 @@ nav h3:hover {
 
 .header-logo {
   height: 100%;
+}
+main {
+  position: sticky;
+}
+.label {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: aquamarine;
+  cursor: pointer;
+}
+.label img {
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+.hidden-block {
+  /* display: none; */
+  width: 200px;
+  height: 400px;
+  margin-top: 20px;
+  background-color: blue;
+  transition: 1s;
+  opacity: 0;
+  transform: scale(0) rotate(0);
+}
+#check:checked ~ .hidden-block {
+  opacity: 100%;
+  transform: scale(1) rotate(360deg);
+  /* display: block; */
+}
+#check {
+  display: none;
+}
+footer {
+  height: 1000px;
+  background-color: brown;
 }
